@@ -4,15 +4,15 @@
       <form>
         <div>
           <label>First Name:</label>
-          <input type="text" class="form-input" id="firstName" value="Mario"/>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
         </div>
         <div>
           <label>Last Name:</label>
-          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
         </div>
         <div>
           <label>Age:</label>
-          <input type="number" class="form-input" id="age" value="25"/>
+          <input type="number" class="form-input" id="age" value="25" />
         </div>
       </form>
     </div>
@@ -20,5 +20,19 @@
 </html>
 
 <script>
-  // code here
+  let firstName = document.querySelector("#firstName");
+  let lastName = document.querySelector("#lastName");
+  let age = document.querySelector("#age");
+
+  const person = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    age: age.value,
+  };
+
+  const form = document.querySelector("form");
+
+  form.setAttribute("data-person", JSON.stringify(person));
+
+  console.log(form);
 </script>

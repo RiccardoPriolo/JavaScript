@@ -15,4 +15,13 @@
 
 <script>
   // code here
+  const mouseOver = document.querySelectorAll(".hero-list-item");
+
+  mouseOver.forEach((li) => {
+    li.addEventListener("mouseenter", () => (li.style.backgroundColor = "red"));
+    li.addEventListener(
+      "mouseleave",
+      () => (li.style.backgroundColor = "transparent")
+    );
+  });
 </script>

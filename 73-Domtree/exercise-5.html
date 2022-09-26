@@ -12,4 +12,62 @@
 
 <script>
   // code here
+
+  let tBody = document.querySelector("tbody");
+  let addBtn = document.getElementById("add-row");
+
+  // SVOLGIMENTO ESERCIZIO PRENDENDO IN CONSIDERAZIONE  IL CAMPO DI TESTO RICHIESTO COME UN <input>
+
+  function addRow() {
+    let trElement = document.createElement("tr");
+
+    let inputFirstName = document.createElement("input");
+    inputFirstName.setAttribute("type", "text");
+    inputFirstName.setAttribute("placeholder", "firstName");
+
+    let inputLastName = document.createElement("input");
+    inputLastName.setAttribute("placeholder", "text");
+    inputLastName.setAttribute("placeholder", "lastName");
+
+    let inputAge = document.createElement("input");
+    inputAge.setAttribute("type", "number");
+    inputAge.setAttribute("placeholder", "age");
+
+    const inputElement = [inputFirstName, inputLastName, inputAge];
+
+    for (let i = 0; i < inputElement.length; i++) {
+      trElement.append(inputElement[i]);
+    }
+
+    tBody.append(trElement);
+
+    console.log(tBody);
+  }
+
+  // SVOLGIMENTO ESERCIZIO PRENDENDO IN CONSIDERAZIONE  IL CAMPO DI TESTO RICHIESTO COME UN <th>
+
+  // function addRow() {
+  //   let trElement = document.createElement("tr");
+
+  //   let thFirstName = document.createElement("th");
+  //   thFirstName.innerText = "firstName";
+
+  //   let thLastName = document.createElement("th");
+  //   thLastName.innerText = "lastName";
+
+  //   let thAge = document.createElement("th");
+  //   thAge.innerText = "age";
+
+  //   const thElement = [thFirstName, thLastName, thAge];
+
+  //   for (let i = 0; i < thElement.length; i++) {
+  //     trElement.append(thElement[i]);
+  //   }
+
+  //   tBody.append(trElement);
+
+  //   console.log(tBody);
+  // }
+
+  addBtn.addEventListener("click", addRow);
 </script>
